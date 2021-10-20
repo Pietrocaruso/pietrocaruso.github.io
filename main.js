@@ -11,7 +11,7 @@ var clicked = []
  var tasto = e.keyCode;
  var tastoletter = e.getKey;
     
-    var tosearch = "ciao"
+    var tosearch = secret()
     var tosearch = tosearch.toUpperCase()
     var tosearch = tosearch.split('')
     var testo = String.fromCharCode(tasto)
@@ -40,10 +40,7 @@ var clicked = []
             }else {
                 var equal = false
             } 
-        if (equal == true){
-            clicked = [];
-            alert("Giusto")
-        }
+        if (equal == true){alert("Giusto")}
         if (tasto == 18){
             clicked = []
 
@@ -56,7 +53,11 @@ var clicked = []
     
     
  }
- 
+ function secret () {
+
+    
+ }
+
 
 
  
