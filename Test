@@ -1,0 +1,34 @@
+document.addEventListener("DOMContentLoaded", function (event) {
+    type();
+    movingBackgroundImage();
+    
+ });
+
+ function getKey(e)
+ {
+ var tasto = e.keyCode;
+ var tastoletter = e.getKey;
+    var url = window.location.pathname;
+    var filename = url.substring(url.lastIndexOf('/')+1);
+    var clicked = []
+    var tosearch = "ciao"
+        if (tasto == 49){
+            // window.location.href = window.location.pathname + "/index.html"
+            window.location.assign("/contact.html");
+        
+        }
+        if (tasto == 51){
+            window.location.href = url.replace("/"+ filename,"/contact.html") ;
+        }
+        if (clicked == tosearch.split('') ){
+            alert("giusto")
+        }
+    clicked = clicked.push(tasto)
+    
+
+    }
+
+ alert(filename);
+ document.onkeyup = getKey;
+ 
+
