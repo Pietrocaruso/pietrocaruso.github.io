@@ -54,7 +54,7 @@ var clicked = []
     
  }
  function secret () {
-
+    return "ciao"
     
  }
 
