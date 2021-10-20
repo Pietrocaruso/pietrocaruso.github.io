@@ -42,7 +42,7 @@ var clicked = []
             } 
         if (equal == true){
             clicked = [];
-            alert("giusto")
+            alert("Giusto")
         }
         if (tasto == 18){
             clicked = []
