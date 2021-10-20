@@ -40,7 +40,10 @@ var clicked = []
             }else {
                 var equal = false
             } 
-        if (equal == true){alert("Giusto")}
+        if (equal == true){
+            clicked = []:
+            alert("giusto")
+        }
         if (tasto == 18){
             clicked = []
 
