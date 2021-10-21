@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function (event) {
     type();
-    movingBackgroundImage();
+    //movingBackgroundImage();
     
  });
 var url = window.location.pathname;
@@ -10,13 +10,55 @@ var clicked = []
  {
  var tasto = e.keyCode;
  var tastoletter = e.getKey;
-    
-    var tosearch = secret()
-    var tosearch = tosearch.toUpperCase()
-    var tosearch = tosearch.split('')
-    var testo = String.fromCharCode(tasto)
+ console.log(Array.isArray(secret()))
+ if (Array.isArray(secret())== false){
+     var tosearch = secret()
+        var tosearch = tosearch.toUpperCase()
+        var tosearch = tosearch.split('')
+        var testo = String.fromCharCode(tasto)
+        
+        if (clicked.length == tosearch.length){
+            for (var i = 0; i < clicked.length; i++) {
+                            if (clicked[i] == tosearch[i])  {
+                                var equal =  true
+                            }else {
+                                var equal = false
+                            }
+                        }
+       
+        }else {
+            var equal = false
+        } 
+    }else{
+        let c = 0 
+        do {
+            
+            tosearch =  secret()[c]
+            console.log(typeof tosearch)
+            
+            var tosearch = tosearch.toUpperCase()
+        var tosearch = tosearch.split('')
+        var testo = String.fromCharCode(tasto)
+        
+        if (clicked.length == tosearch.length){
+            for (var i = 0; i < clicked.length; i++) {
+                            if (clicked[i] == tosearch[i])  {
+                                var equal =  true
+                            }else {
+                                var equal = false
+                            }
+                        }
+       
+        }else {
+            var equal = false
+        } 
+        c =+ c
+        console.log(c)
+        } while (c == secret().length);
+        
+    }
     clicked.push(testo)
-        if (tasto == 49){
+    if (tasto == 49){
             window.location.href = url.replace("/"+ filename,"/index.html") ;
         
         }
@@ -28,18 +70,6 @@ var clicked = []
         
 
             
-            if (clicked.length == tosearch.length){
-                for (var i = 0; i < clicked.length; i++) {
-                                if (clicked[i] == tosearch[i])  {
-                                    var equal =  true
-                                }else {
-                                    var equal = false
-                                }
-                            }
-
-            }else {
-                var equal = false
-            } 
         if (equal == true){alert("Giusto")}
         if (tasto == 18){
             clicked = []
@@ -54,7 +84,7 @@ var clicked = []
     
  }
  function secret () {
-    return "ciao"
+    return ["cioa","ciao","come"]
     
  }
 
