@@ -340,26 +340,6 @@ const crtLoveTl = () => {
 };
 
 const loveTl = crtLoveTl().play();
-setInterval(() => {loveTl.replay();}, 4300);
+setInterval(() => {loveTl.replay();}, 6000);
 
-const volume = 0.2;
-el.blup.volume = volume;
-el.blop.volume = volume;
 
-const toggleSound = () => {
-  let on = true;
-  return () => {
-    if (on) {
-      el.blup.volume = 0.0;
-      el.blop.volume = 0.0;
-      el.sound.classList.add('sound--off');
-    } else
-    {
-      el.blup.volume = volume;
-      el.blop.volume = volume;
-      el.sound.classList.remove('sound--off');
-    }
-    on = !on;
-  };
-};
-el.sound.addEventListener('click', toggleSound());

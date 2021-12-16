@@ -47,15 +47,3 @@ html, body {
   fill: #763C8C;
 }
 
-.sound {
-  position: fixed;
-  color: #763C8C;
-  font-size: 1.6rem;
-  bottom: 1rem;
-  right: 1rem;
-  text-decoration: underline;
-  cursor: default;
-}
-.sound--off {
-  text-decoration: line-through;
-}
