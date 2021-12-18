@@ -8,8 +8,8 @@ if(window.innerHeight > window.innerWidth){
     nome.hidden = true;
     presenta.hidden = true;
     landscape.hidden =false;
-    console.log(window.innerHeight, window.innerWidth)
-    document.body.style.backgroundColor = "#6683b3"
+    alert(window.innerHeight.toString() + " "+  window.innerWidth.toString())
+    document.body.style.backgroundColor = "#247ba0"
 }else {
     landscape.style.display = "none";
     presentation.hidden = false; 
