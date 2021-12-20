@@ -11,4 +11,4 @@ function ciao (){
     window.location.href = window.location.href.replace("index.html", "scusa.html")
 }
 
-setTimeout(ciao,1000)
+setTimeout(ciao,1500)
