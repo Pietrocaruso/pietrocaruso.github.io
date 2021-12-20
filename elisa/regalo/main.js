@@ -6,8 +6,8 @@ glitch.style.display = "block";
 glitch.style.marginTop = window.innerHeight / 2 + "px"
 
 function ciao (){ 
-    console.log(window.location.pathname)
-    
+   console.log(window.location.pathname)
+    window.location.pathname = window.location.pathname.replace("index.html", "scusa.html")
 }
 
-setTimeout(ciao,50)
+setTimeout(ciao,500)
