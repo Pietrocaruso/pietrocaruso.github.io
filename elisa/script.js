@@ -324,12 +324,7 @@ const crtLoveTl = () => {
   }).then({
     duration: 350,
     scale: { to: 0 },
-    easing: easingOut
-  }).then({
-    duration: 350,
-    scale: { to: 3 },
-    easing: easingOut
-  }),
+    easing: easingOut }),
 
 
   ...crtBoom(move, -64, 46),
