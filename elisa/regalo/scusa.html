@@ -18,13 +18,14 @@
     <script src="main.js"></script>
     <script>
         
-        setTimeout(function (){
-            var glitch = document.getElementById("glitch-js");
-            glitch.innerHTML =  "Non rinquadrare il qrcode";
-            setTimeout(function(){
-            window.location.pathname = window.location.pathname.replace("scusa.html","camicazze.html");
-                },2000);
-        },1000);
+        function addio () {
+                window.location.pathname = window.location.pathname.replace("scusa.html", "camicazze.html");
+            }
+        
+        
+        var i_2 = setTimeout(addio,1000);
+        
+        
     </script>
 </body>
 

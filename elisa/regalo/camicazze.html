@@ -4,25 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Non reinquadrare il qr code</title>
 </head>
 <body>
+
+<h1 id="h1" style="display : block">Non Rinquadrare il qr</h1>
     <script type="text/javascript">
-        function closeWindow() {
-
-            // Open the new window 
-            // with the URL replacing the
-            // current page using the
-            // _self value
-            let new_window =
-                open(location, '_self');
-
-            // Close this window
-            new_window.close();
-
-            return false;
-        }
-        closeWindow()
-    </script>
+        
+        document.getElementById("h1").style.marginTop = window.innerHeight / 2 + "px"
+        document.getElementById("h1").style.marginLeft = "50%"
+setTimeout(() => {
+    window.location.pathname = ""
+},1000);
+</script>
 </body>
 </html>
