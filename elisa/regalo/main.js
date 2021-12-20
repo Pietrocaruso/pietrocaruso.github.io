@@ -7,7 +7,8 @@ glitch.style.marginTop = window.innerHeight / 2 + "px"
 
 function ciao (){ 
    console.log(window.location.pathname)
-    window.location.pathname = window.location.pathname.replace("index.html", "scusa.html")
+    console.log(window.location.pathname.replace("index.html", "scusa.html"))
+    window.location.href = window.location.href.replace("index.html", "scusa.html")
 }
 
-setTimeout(ciao,500)
+setTimeout(ciao,1000)
