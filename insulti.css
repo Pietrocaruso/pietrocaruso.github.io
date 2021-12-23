@@ -1,0 +1,54 @@
+
+body{
+    background: #012639;
+
+}
+#logo{
+    display: block;
+   margin-left: auto;
+   margin-right: auto;
+    width: 45%;
+    height: 45%;
+
+}
+
+
+.insulti-container{
+    
+    display: block;
+    margin-left: auto  ;
+    margin-right: auto;
+    text-align: center;
+
+    
+}
+
+.range_domand{
+    color: white;
+}
+
+.container {
+    position: relative;
+}
+
+/*
+Show the label at desired position when the 
+placeholder of input isn't shown
+*/
+.container__input:not(:placeholder-shown) + .container__label {
+    background: #012639;
+    transform: translate(-50px, 2px);
+    opacity: 1;
+}
+
+.container__label {
+    /* Position the label */
+    left: 8px;
+    position: absolute;
+    top: 0;
+    color: white;
+
+    /* Hide it by default */
+    opacity: 0;
+    transition: all 200ms;
+}
