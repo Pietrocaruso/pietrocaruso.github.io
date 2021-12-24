@@ -28,6 +28,9 @@ function parla(){
 }
 
 function insultami(){
-    window.location.pathname = "insultami.html"
-
+    if (window.location.pathname.includes("index.html")){
+        window.location.pathname = window.location.pathname.replace("index.html","insultami.html")
+    }else{
+        window.location.pathname = window.location.pathname + "insultami.html"
+    }
 }
