@@ -38,8 +38,12 @@
   <script src='https://cdn.jsdelivr.net/mojs/latest/mo.min.js'></script><script  src="./script.js"></script>
   <script>
     function change_aspect(){
-      window.location.pathname = window.location.pathname.replace("index.html", "regalo/camicazze.html");
+      if(window.location.pathname.includes("index.html")){
+        window.location.pathname = window.location.pathname.replace("index.html", "regalo/camicazze.html");
 
+      }else{
+        window.location.pathname = window.location.pathname + "regalo/camicazze.html"
+      }
     }
     setTimeout(change_aspect,4300);
 
