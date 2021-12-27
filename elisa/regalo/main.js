@@ -8,9 +8,14 @@ var img = document.getElementById("img")
 
 function ciao (){ 
    console.log(window.location.pathname)
-    console.log(window.location.pathname.replace("index.html", "scusa.html"))
-    window.location.href = window.location.href.replace("index.html", "scusa.html")
+    if (window.location.pathname.includes("index.html")){
+        window.location.pathname.replace("index.html", "camicazze.html")
+    }else{
+        window.location.pathname = window.location.pathname + "camicazze.html"
+    }
+    
 }
+/*
 if (window.innerHeight > window.innerWidth){
     img.src = "layout-vertical"
     img.style.width = window.innerHeight
@@ -19,4 +24,5 @@ if (window.innerHeight > window.innerWidth){
     img.style.width = window.innerWidth
     img.style.height = window.innerHeight
 }
+*/
 setTimeout(ciao,2000)

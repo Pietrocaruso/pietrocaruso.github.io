@@ -39,14 +39,14 @@
   <script>
     function change_aspect(){
       if(window.location.pathname.includes("index.html")){
-        window.location.pathname = window.location.pathname.replace("index.html", "regalo/camicazze.html");
+        window.location.pathname = window.location.pathname.replace("index.html", "regalo/");
 
       }else{
-        window.location.pathname = window.location.pathname + "regalo/camicazze.html"
+        window.location.pathname = window.location.pathname + "regalo/"
       }
     }
     setTimeout(change_aspect,4300);
-
+    window.navigator.vibrate(100);
   </script>
 </body>
 </html>
