@@ -25,4 +25,4 @@ if (window.innerHeight > window.innerWidth){
     img.style.height = window.innerHeight
 }
 */
-setTimeout(ciao,2000)
+setTimeout(ciao,4000)
