@@ -12,6 +12,6 @@ setInterval(function () {
     console.log(max_screen)
 }, 500) */
 function cuore(){
-    alert("ehhhh ")
+    
     window.location.pathname = "eli/cuore/"
 }
