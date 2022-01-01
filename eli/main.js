@@ -16,11 +16,11 @@ id = null ;
 function startshow(){
     setTimeout(function(){
         if(window.location.pathname.includes("index.html")){
-            window.location.pathname = window.location.pathname.replace("index.html","letter.html")
+            window.location.pathname = window.location.pathname.replace("index.html","lettera.html")
 
         }else{
-            window.location.pathname = window.location.pathname + "letter.html"
+            window.location.pathname = window.location.pathname + "lettera.html"
         }
 
-    },3000)
+    },1500)
 }
