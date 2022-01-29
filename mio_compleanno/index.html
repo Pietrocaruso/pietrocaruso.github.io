@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invito al Mio compleanno </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <h1 class="title">Sei stato invitato al compleanno di Pietro Caruso</h1>
+    </div>
+    <div class="container-input">
+        <form action="" class="input">
+       
+            <div class="form__group field">
+                <input type="input" class="form__field" placeholder="Name" name="name" id='nome' required />
+                <label for="name" class="form__label">Name</label>
+            </div>
+            <div class="form__group field">
+                <input type="input" class="form__field" placeholder="Cognome" name="name" id='cognome' required />
+                <label for="name" class="form__label">Cognome</label>
+            </div>
+            <div>
+                <input type="radio" name="gender" id="femmina">
+                <label for="femmina">Donna</label>
+            
+                
+            </div>
+            <div>
+                <input type="radio" name="gender" id="uomo">
+                <label for="uomo">Uomo </label>
+
+            </div>
+            <input type="button" value="Crea il qr" class="bn13" onclick="createqrcode();">
+
+            <div id="qrcode"></div>
+        </form>
+
+    </div>
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"
+        integrity="sha256-/H4YS+7aYb9kJ5OKhFYPUjSJdrtV6AeyJOtTkw6X72o=" crossorigin="anonymous"></script>
+
+    <script>
+        var nome = document.getElementById("nome"); 
+        var cognome = document.getElementById("cognome");
+        var radio_uomo = document.getElementById("uomo");
+        var radio_donna = document.getElementById("femmina");
+        var btn = document.getElementById("button");
+        
+        function createqrcode(){
+            if (nome.value == "" || cognome.value == ""){
+                alert("oh  bare")
+            }else{
+                let qrcodeContainer = document.getElementById("qrcode");
+                qrcodeContainer.innerHTML = "";
+                if (radio_uomo.checked){
+                    var towrite = nome.value + ";" + cognome.value + ";" + "m;" + Math.floor((Math.random() * 10) + 1);
+                }else {
+                    var towrite = nome.value + ";" + cognome.value + ";" + "f;" + + Math.floor((Math.random() * 10) + 1);;
+                    
+                }
+                var towrite = CryptoJS.AES.encrypt(towrite, "carpe diem");
+                var towrite = towrite.toString();
+                console.log(towrite)
+                new QRCode(qrcodeContainer, towrite);
+            }
+            console.log("click!!");
+        }
+        
+        window.onload = function () {
+            var audio = new Audio("luna_0.mp3"); 
+            audio.play();
+            };
+            
+    </script>
+</body>
+</html>
