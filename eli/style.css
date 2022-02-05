@@ -254,6 +254,6 @@ body, html {
 }
 .title{
   
-  left: 50%;
-  position: absolute;
+   display: flex;
+  justify-content: center;
 }
