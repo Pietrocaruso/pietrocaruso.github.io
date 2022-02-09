@@ -3,74 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <title>❤</title>
-  <link rel='stylesheet' href='https://unpkg.com/splitting/dist/splitting.css'>
-<link rel='stylesheet' href='https://unpkg.com/splitting/dist/splitting-cells.css'>
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Felipa'><link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./style.css">
 
 </head>
 <body>
 <!-- partial:index.partial.html -->
-<div id="box" class="box" >
-  <div class="grid" onclick="Splitting();">
-    
-    <div class="col1-row1">
-      <div class="triangle"></div>
-    </div>
-    <div class="col2-row1">
-      <div class="triangle"></div>
-    </div>
-    <div class="col3-row1">
-      <div class="triangle"></div>
-    </div>
-    <div class="col4-row1">
-      <div class="triangle"></div>
-    </div>
+<!-- Explanation in JS tab -->
 
-    <div class="col1-row2">
-      <div class="triangle"></div>
-    </div>
-    <div class="col2-row2">
-      <div class="triangle"></div>
-    </div>
-    <div class="col3-row2">
-      <div class="triangle"></div>
-    </div>
-    <div class="col4-row2">
-      <div class="triangle"></div>
-    </div>
-
-    <div class="col1-row3">
-      <div class="triangle"></div>
-    </div>
-    <div class="col2-row3">
-      <div class="triangle"></div>
-    </div>
-    <div class="col3-row3">
-      <div class="triangle"></div>
-    </div>
-    <div class="col4-row3">
-      <div class="triangle"></div>
-    </div>
-
-    <div class="col1-row4">
-      <div class="triangle"></div>
-    </div>
-    <div class="col2-row4">
-      <div class="triangle"></div>
-    </div>
-    <div class="col3-row4">
-      <div class="triangle"></div>
-    </div>
-    <div class="col4-row4">
-      <div class="triangle"></div>
-    </div>
-    
-  </div>
-  <div class="text" data-splitting>Elisa <code>x</code> Pietro</div>
+<!-- The two texts -->
+<div id="container">
+	<span id="text1"></span>
+	<span id="text2"></span>
 </div>
+
+<!-- The SVG filter used to create the merging effect -->
+<svg id="filters">
+	<defs>
+		<filter id="threshold">
+			<!-- Basically just a threshold effect - pixels with a high enough opacity are set to full opacity, and all other pixels are set to completely transparent. -->
+			<feColorMatrix in="SourceGraphic"
+					type="matrix"
+					values="1 0 0 0 0
+									0 1 0 0 0
+									0 0 1 0 0
+									0 0 0 255 -140" />
+		</filter>
+	</defs>
+</svg>
 <!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js'></script>
-<script src='https://unpkg.com/splitting/dist/splitting.min.js'></script><script  src="./script.js"></script>
+  <script  src="./script.js"></script>
 
 </body>
 </html>
