@@ -12,7 +12,6 @@ const texts = [
   "Ciao",
   "sono",
   "Pietro",
-  "Caruso",
   "e",
   "ti",
   "auguro",

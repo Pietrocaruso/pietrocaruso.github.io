@@ -32,7 +32,7 @@ Object.keys(elements).forEach(key => {
 
 const tl = new TimelineMax(config);
 
-const explodeTime = 2;
+const explodeTime = 6;
 const explodeEase = SlowMo.ease.config(0.7, 0.7, false);
 
 
